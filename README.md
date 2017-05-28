@@ -1,2 +1,0 @@
-# GaneshKhadka
-Logpoint Task
