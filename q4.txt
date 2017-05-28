@@ -1,0 +1,30 @@
+Given the client wants Website for his T-Shirt Manufacturing company, and I am hired as PM of the project I will resort to Agile Software Development and make use of Extreme programming (XP) as software development methodology which is intended to improve software quality and responsiveness to changing customer requirements.
+Since XP is suited for smaller teams and since the website is also of medium scale I think this method will be best for the this particular development, further adding XP would be the best for this project because:
+
+1.XP is a lightweight, efficient, low-risk, flexible, predictable, scientific, and fun way to develop a software.
+2.Extreme Programming was conceived and developed to address the specific needs of software development by small teams in the face of vague and changing requirements.
+3. Extreme Programming is perceived to be effective in smaller teams, with a team size up to 12-16 developers.
+
+As the PM I would take overall responsibility for the successful initiation, planning, design, execution, monitoring, controlling and closure of a project. 
+I would take following steps for succession from one stage to another in the development process:
+
+
+1. The first step in development will be to undestand the requirement for the product. Even though the website is for a tshirt company the customer may have his own expectation. In order to understand requirements we would be collecting all the features that our customer, end users, team member, executive etc. want on the product with their benefits. We will be creating a product backlog collection of all the wish list from everyone.
+
+2. The practicality of project requirements and feasibility would be considered.
+
+3. The functionality will be extracted from user strories since stories are the primary deliverable of this level activity. and the highest priority is developed first which means that the early iterations will involve the functionalities with the highest priority. Each functionality will be assigned to a pair of programmers.
+
+4 .Each stories are evolved into probable iterations.
+
+5. Each functionality will be thoroughly tested.
+
+6. At the end of each iteration, the client will be shown the finished functionality  and then the client will provide the team with their feedback.
+
+7.  All the functionalities will be then integrated, tested and quality assured.
+
+8. Finally the application is deployed and proper training is given to the client to use the application.
+
+9. Support and maintenance will be provided to the client until the final version is deployed.
+
+10. The project is then retired. 
