@@ -1,0 +1,40 @@
+/**
+ * Created by Ganes on 27/05/2017.
+ */
+public class AmicableNumbers {
+    public static void main(String[] args) {
+        int megaSum = 0;
+        int sum;
+        int j = 0;
+        int i = 1;
+        System.out.print("First Amicable numbers under 10000 : ");
+
+        while (i < 10000){                  /*Loop 9999 times*/
+            sum = sumOfSum(i, j);           /*Returns SUM of perfect divisors of SUM of prefect divisor of i
+            eg: if i is 220: sum of perfect divisors of 220 is 284 and sum of perfect divisors of 284 is 220 itself*/
+            if (sum == i) {                 /*Check if the SUM of SUM of perfect divisor of i is i itself*/
+                System.out.print(i+" " );
+                megaSum += sum;             /*Sum all the amicable numbers*/
+            }
+            ++i;
+        }
+        System.out.println("\nThe sum of first 10000 number is : "+megaSum);
+    }
+
+    private static int sumOfSum(int num, int j) {
+        int sum = 0;
+        for (int i = 1; i <= num / 2; i++) {   /*Perfect divisor occur until the half of any number */
+            if (num % i == 0) {                /*If perfect divisor sum up*/
+                sum += i;
+            }
+        }
+        if (num != sum) {                   /*If the sum results the same number return 0 else make a RECURSIVE call*/
+            if (j < 1) {
+                return sumOfSum(sum, ++j);
+            } else return sum;              /*Returns SUM of perfect divisors of SUM of prefect divisor of i
+            eg: if input is 220: sum of perfect divisors of 220 is 284 and sum of perfect divisors of 284 is 220 itself*/
+        } else {
+            return 0;
+        }
+    }
+}

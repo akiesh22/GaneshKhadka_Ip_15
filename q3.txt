@@ -1,0 +1,21 @@
+Ans:
+
+Given,
+int a,b,c;
+a=60000;
+intput b;
+c=a+b;
+
+Condition:
+-Only positive input is allowed
+-Unsigned values only allowed
+-All the variables are 2 bytes integers
+
+Since all the integers are of 2 bytes and are unsigned the range for variables can be from :
+(0 to 2^16-1) (16 bit) (i:e -1 for 0)
+(0 to 65535)
+
+Since a is already 60000
+b can be (given c=a+b) in range of 0 to (65535-60000)
+i:e b can have any values from o to 5535(maximum) so that we can get correct sum.
+ 

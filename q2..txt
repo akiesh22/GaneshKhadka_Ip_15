@@ -1,0 +1,62 @@
+/**
+ * Created by Ganes on 27/05/2017.
+ */
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
+
+public class HappyNumber {
+    public static void main(String[] args) {
+        int num = 0;
+        int flag = 0;
+        boolean ipFlag = true;
+        int var = 0;
+        System.out.println("Please enter a positive integer :");
+        while (ipFlag) {                                 /*restricting illegal input*/
+            try {
+                Scanner s = new Scanner(System.in);
+                num = s.nextInt();
+                var = num;
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Enter Integer only: ");
+            }
+        }
+
+
+        if (num == 1) {                                   /*Check if input is 1 else check if the number is happy or not*/
+            System.out.println(num + " is a Happy number");
+        } else {
+            List<Integer> temp = new ArrayList<>();       /*Create a list to store the last digit in the list*/
+            int sum = 0;
+            while (sum != 1) {                            /*Numbers that are happy follow a sequence that ends in 1*/
+                sum = 0;
+                while (num != 0) {                         /*Store the last digit in the list's index*/
+                    temp.add(num % 10);
+                    num = num / 10;
+                }
+         for (int j = 0; j < temp.size(); j++) {           /*Square the stored digit in the list's index*/
+                    int value = temp.get(j);
+                    temp.set(j, value * value);
+                    sum += temp.get(j);                   /*sum up the square of digits stored in index of list*/
+                    if (j == temp.size() - 1) {
+                        num = sum;
+                        temp.clear();                    /*clear the list to make room for another evaluation*/
+                    }
+                }
+                System.out.println(sum);
+                /*All non-happy numbers follow sequences that reach the cycle:
+                4, 16, 37, 58, 89, 145, 42, 20, 4... Break the loop if these number arrive*/
+                if (sum == 4 || sum == 16 || sum == 37 || sum == 58 || sum == 89 || sum == 145 || sum == 42 || sum == 20) {
+                    System.out.println(var + " IS NOT a happy number");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag != 1)
+                System.out.println(var + " IS a happy number");
+        }
+    }
+}
+
